@@ -91,7 +91,10 @@ The user experience focuses on being clean, modern, consistent, and easy to navi
 ---
 
 ## APK Download Information
-* **Google Drive Link**: _To be added upon generation_
+* **Google Drive Link**: [Download Flick APK (Universal)](https://drive.google.com/file/d/1f45PdZ8TuLPG02rcipEdjeCOINE11B6r/view?usp=sharing)
+* **File Size:** ~97MB (Universal Fat Binary)
+* **Architectural Size Justification:** 
+  To ensure instant compatibility across any physical Android device or standard computer-based simulator during your evaluation, this package is compiled as a **Fat APK**. It bundles the native Hermes engine and React Native runtime compiled separately for all four major target CPU architectures (`arm64-v8a`, `armeabi-v7a`, `x86_64`, and `x86`). When published to production on the Google Play Store as an `.aab` (Android App Bundle), Google Play automatically splits the binary so that end-user download sizes are reduced to approximately ~15MB.
 * **Download Instructions**:
   1. Open the Google Drive link provided.
   2. Download the `.apk` file to your Android device.
@@ -114,9 +117,9 @@ The user experience focuses on being clean, modern, consistent, and easy to navi
 - [x] 3 required screens completed
 - [x] Tinder-style swipe feature implemented
 - [x] Minimalistic design followed
-- [ ] APK created
-- [ ] APK uploaded to Google Drive
-- [ ] README.md completed with active links
+- [x] APK created
+- [x] APK uploaded to Google Drive
+- [x] README.md completed with active links
 - [x] Gideon updated throughout progress
 - [x] Repository accessible
-- [ ] App builds and runs successfully
+- [x] App builds and runs successfully
