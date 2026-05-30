@@ -1,4 +1,4 @@
-# Flame App
+# Flick App
 
 A minimalistic mobile dating application prototype built with **React Native Expo** for the Lead/Senior React Native Developer Technical Assessment.
 
@@ -30,12 +30,12 @@ The application is structured to fulfill the following core specifications:
 * Tinder-like swiping behavior (left/right gestures) utilizing smooth animations.
 * Display profile cards populated with name, age, bio, interests, and profile images.
 * Loaded from shared mock profile data using Unsplash placeholders.
-* **Path**: `src/features/swipe/screens/swipe-screen.tsx` (routed via `src/app/explore.tsx`).
+* **Path**: `src/features/swipe/screens/swipe-screen.tsx` (routed via `src/app/swipe.tsx`).
 
 ### 3. Match / Profile Details Screen
 * Better profile presentation detailing the selected/matched profile.
 * Includes specialized interaction areas such as messaging triggers, like indicators, and match confirmations.
-* **Path**: `src/features/profile/screens/profile-detail-screen.tsx` (routed via `src/app/profile.tsx`).
+* **Path**: `src/features/profile/screens/profile-detail-screen.tsx` (routed via `src/app/profile/[id].tsx`).
 
 ---
 
@@ -48,6 +48,8 @@ The application adheres to a **minimalistic design style**:
 * **Accent Color**: Red
 
 The user experience focuses on being clean, modern, consistent, and easy to navigate.
+
+* **Native Adaptive Theme:** The prototype automatically responds to system-level preference changes, dynamically transitioning between high-contrast light and dark themes using native hooks.
 
 ---
 
@@ -89,7 +91,10 @@ The user experience focuses on being clean, modern, consistent, and easy to navi
 ---
 
 ## APK Download Information
-* **Google Drive Link**: _To be added upon generation_
+* **Google Drive Link**: [Download Flick APK (Universal)](https://drive.google.com/file/d/1f45PdZ8TuLPG02rcipEdjeCOINE11B6r/view?usp=sharing)
+* **File Size:** ~97MB (Universal Fat Binary)
+* **Architectural Size Justification:** 
+  To ensure instant compatibility across any physical Android device or standard computer-based simulator during your evaluation, this package is compiled as a **Fat APK**. It bundles the native Hermes engine and React Native runtime compiled separately for all four major target CPU architectures (`arm64-v8a`, `armeabi-v7a`, `x86_64`, and `x86`). When published to production on the Google Play Store as an `.aab` (Android App Bundle), Google Play automatically splits the binary so that end-user download sizes are reduced to approximately ~15MB.
 * **Download Instructions**:
   1. Open the Google Drive link provided.
   2. Download the `.apk` file to your Android device.
@@ -105,16 +110,16 @@ The user experience focuses on being clean, modern, consistent, and easy to navi
 ---
 
 ## Submission Checklist
-- [ ] gideonchukwuoma added as contributor
+- [x] gideonchukwuoma added as contributor
 - [x] React Native Expo (SDK 56) used
 - [x] Folder structure setup completed
 - [x] Navigation configured
-- [ ] 3 required screens completed
-- [ ] Tinder-style swipe feature implemented
-- [ ] Minimalistic design followed
-- [ ] APK created
-- [ ] APK uploaded to Google Drive
-- [ ] README.md completed with active links
-- [ ] Gideon updated throughout progress
-- [ ] Repository accessible
-- [ ] App builds and runs successfully
+- [x] 3 required screens completed
+- [x] Tinder-style swipe feature implemented
+- [x] Minimalistic design followed
+- [x] APK created
+- [x] APK uploaded to Google Drive
+- [x] README.md completed with active links
+- [x] Gideon updated throughout progress
+- [x] Repository accessible
+- [x] App builds and runs successfully
