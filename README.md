@@ -109,12 +109,12 @@ The user experience focuses on being clean, modern, consistent, and easy to navi
 - [x] React Native Expo (SDK 56) used
 - [x] Folder structure setup completed
 - [x] Navigation configured
-- [ ] 3 required screens completed
-- [ ] Tinder-style swipe feature implemented
-- [ ] Minimalistic design followed
+- [x] 3 required screens completed
+- [x] Tinder-style swipe feature implemented
+- [x] Minimalistic design followed
 - [ ] APK created
 - [ ] APK uploaded to Google Drive
 - [ ] README.md completed with active links
-- [ ] Gideon updated throughout progress
-- [ ] Repository accessible
+- [x] Gideon updated throughout progress
+- [x] Repository accessible
 - [ ] App builds and runs successfully
