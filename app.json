@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fame-app",
-    "slug": "fame-app",
+    "name": "flick-app",
+    "slug": "flick-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -45,7 +45,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "44f0fd11-a064-4490-94bc-adadb2a65a5c"
+        "projectId": "7861966a-72fa-4158-8df9-b93beb5c5de4"
       }
     }
   }
