@@ -10,7 +10,10 @@ We use a feature-based structure to organize the codebase cleanly and modularly:
 * **`src/shared/`**: Global reusable UI components, hooks, types, theme tokens, and data.
 
 ### Architectural Justification
-> I kept app/ as a thin routing layer and isolated feature logic into features/ so each screen's concerns are self-contained, while truly reusable pieces live in shared/.
+* **Modular Domain Isolation**: I kept `src/app/` as a thin routing layer and isolated feature logic into `src/features/` so each screen's concerns are self-contained, while truly reusable pieces live in `src/shared/`.
+* **Native Thread Swipe Performance**: The swipe card deck is optimized for fluid visual performance by prioritizing **native thread animation execution** through the combination of `react-native-gesture-handler` and `react-native-reanimated`.
+  - All physics calculations, card transformations, rotation, and stamp opacity interpolation run fully on the **native UI thread**, completely avoiding JS-bridge communication bottleneck latency during card tracking.
+  - To prevent thread blockages, interactive callbacks and navigation events are delegated to the JS thread asynchronously using `scheduleOnRN` from `react-native-worklets` only after the card is released and the swipe completes.
 
 ---
 
@@ -67,7 +70,7 @@ The user experience focuses on being clean, modern, consistent, and easy to navi
 ### Setup Steps
 1. Clone the repository:
    ```bash
-   git clone <repository-link>
+   git clone https://github.com/Morizuq/flick-app.git
    cd flick-app
    ```
 2. Install dependencies:
@@ -97,7 +100,7 @@ The user experience focuses on being clean, modern, consistent, and easy to navi
 
 ## Assumptions & Limitations
 * **Assumptions**: The prototype operates entirely with local mock data for user profiles and does not connect to a live database or authentication backend.
-* **Known Limitations**: Bi-directional gestures and re-swiping cards are handled client-side using transient memory state.
+* **Known Limitations**: User matches, likes, passes, and stack history are managed client-side in transient component state. Swipes and reset states are not persisted across application restarts.
 
 ---
 
