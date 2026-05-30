@@ -17,6 +17,7 @@ export const Colors = {
     greyDark: '#48484A',
     error: '#FF3B30', // Red
     accent: '#FF3B30', // Red
+    success: '#4CD964', // Green
 
     // Semantic tokens
     backgroundElement: '#F2F2F7',
@@ -26,6 +27,9 @@ export const Colors = {
     cardBackground: '#FFFFFF',
     buttonTextPrimary: '#FFFFFF',
     buttonTextSecondary: '#FF3B30',
+    textOnDark: '#FFFFFF',
+    textOnDarkSecondary: 'rgba(255, 255, 255, 0.8)',
+    tagBackgroundOnDark: 'rgba(255, 255, 255, 0.2)',
   },
   dark: {
     // Primary palette
@@ -36,6 +40,7 @@ export const Colors = {
     greyDark: '#AEAEB2',
     error: '#FF453A', // Vibrant Red for dark mode
     accent: '#FF453A', // Vibrant Red for dark mode
+    success: '#30D158', // Vibrant Green for dark mode
 
     // Semantic tokens
     backgroundElement: '#1C1C1E',
@@ -45,6 +50,9 @@ export const Colors = {
     cardBackground: '#1C1C1E',
     buttonTextPrimary: '#FFFFFF',
     buttonTextSecondary: '#FF453A',
+    textOnDark: '#FFFFFF',
+    textOnDarkSecondary: 'rgba(255, 255, 255, 0.8)',
+    tagBackgroundOnDark: 'rgba(255, 255, 255, 0.2)',
   },
 } as const;
 

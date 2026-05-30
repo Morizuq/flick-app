@@ -1,11 +1,10 @@
-import React from 'react';
+import { router, useLocalSearchParams } from 'expo-router';
 import { Pressable, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useLocalSearchParams, router } from 'expo-router';
 
+import { Spacing } from '@/constants/theme';
 import { ThemedText } from '@/shared/components/themed-text';
 import { ThemedView } from '@/shared/components/themed-view';
-import { Spacing } from '@/constants/theme';
 
 export function ProfileDetailScreen() {
   const { id } = useLocalSearchParams<{ id?: string }>();
