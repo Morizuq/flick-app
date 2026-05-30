@@ -2,6 +2,13 @@
 
 A minimalistic mobile dating application prototype built with **React Native Expo** for the Lead/Senior React Native Developer Technical Assessment.
 
+## Preview Screens
+
+| Welcome / Discover | Swipe Match Screen | Profile Details |
+| :-: | :-: | :-: |
+| <img src="https://github.com/user-attachments/assets/a86fb78a-6f29-427c-8564-e0a64500e0b6" width="250" alt="Welcome Screen" /> | <img src="https://github.com/user-attachments/assets/8842f244-0a3c-4fa6-ae0d-e2f58f4b1557" width="250" alt="Swipe Screen" /> | <img src="https://github.com/user-attachments/assets/d941fd8e-9a1a-4265-a1c3-ee7cd10e4b6f" width="250" alt="Profile Details" /> |
+
+
 ## Project Architecture
 
 We use a feature-based structure to organize the codebase cleanly and modularly:
