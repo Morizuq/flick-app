@@ -1,4 +1,4 @@
-# Flame App
+# Flick App
 
 A minimalistic mobile dating application prototype built with **React Native Expo** for the Lead/Senior React Native Developer Technical Assessment.
 
@@ -30,12 +30,12 @@ The application is structured to fulfill the following core specifications:
 * Tinder-like swiping behavior (left/right gestures) utilizing smooth animations.
 * Display profile cards populated with name, age, bio, interests, and profile images.
 * Loaded from shared mock profile data using Unsplash placeholders.
-* **Path**: `src/features/swipe/screens/swipe-screen.tsx` (routed via `src/app/explore.tsx`).
+* **Path**: `src/features/swipe/screens/swipe-screen.tsx` (routed via `src/app/swipe.tsx`).
 
 ### 3. Match / Profile Details Screen
 * Better profile presentation detailing the selected/matched profile.
 * Includes specialized interaction areas such as messaging triggers, like indicators, and match confirmations.
-* **Path**: `src/features/profile/screens/profile-detail-screen.tsx` (routed via `src/app/profile.tsx`).
+* **Path**: `src/features/profile/screens/profile-detail-screen.tsx` (routed via `src/app/profile/[id].tsx`).
 
 ---
 
@@ -105,7 +105,7 @@ The user experience focuses on being clean, modern, consistent, and easy to navi
 ---
 
 ## Submission Checklist
-- [ ] gideonchukwuoma added as contributor
+- [x] gideonchukwuoma added as contributor
 - [x] React Native Expo (SDK 56) used
 - [x] Folder structure setup completed
 - [x] Navigation configured
