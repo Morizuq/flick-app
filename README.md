@@ -49,6 +49,8 @@ The application adheres to a **minimalistic design style**:
 
 The user experience focuses on being clean, modern, consistent, and easy to navigate.
 
+* **Native Adaptive Theme:** The prototype automatically responds to system-level preference changes, dynamically transitioning between high-contrast light and dark themes using native hooks.
+
 ---
 
 ## Tech Stack
