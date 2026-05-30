@@ -1,7 +1,7 @@
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -12,10 +12,19 @@ import { ThemedView } from '@/shared/components/themed-view';
 import { MOCK_PROFILES } from '@/shared/data/profiles';
 import { useTheme } from '@/shared/hooks/use-theme';
 import { SwipeCard } from '../components/swipe-card';
+import { SwipeSkeletonCard } from '../components/swipe-skeleton-card';
 
 export function SwipeScreen() {
   const theme = useTheme();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // 1 millisecond loading state simulation
+    return () => clearTimeout(timer);
+  }, []);
 
   const currentProfile = currentIndex < MOCK_PROFILES.length ? MOCK_PROFILES[currentIndex] : null;
   const nextProfile = currentIndex + 1 < MOCK_PROFILES.length ? MOCK_PROFILES[currentIndex + 1] : null;
@@ -44,7 +53,9 @@ export function SwipeScreen() {
 
         {/* Card Stack Deck */}
         <View style={styles.deckContainer}>
-          {currentProfile ? (
+          {isLoading ? (
+            <SwipeSkeletonCard />
+          ) : currentProfile ? (
             <View style={styles.stackWrapper}>
               {/* Background card underlay | appears behind the current profile */}
               {nextProfile && (
@@ -92,8 +103,8 @@ export function SwipeScreen() {
           )}
         </View>
 
-        {/* Subtle Swipe Guidance (Only visible when active cards exist) */}
-        {currentProfile && (
+        {/* Subtle Swipe Guidance (Only visible when active cards exist and NOT loading) */}
+        {!isLoading && currentProfile && (
           <View style={styles.guidanceContainer}>
             <ThemedText type="caption" themeColor="textSecondary" style={styles.guidanceText}>
               ← Swipe Left to Pass     •     Swipe Right to Like →

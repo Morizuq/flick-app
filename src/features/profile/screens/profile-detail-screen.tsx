@@ -30,16 +30,28 @@ export function ProfileDetailScreen() {
   };
 
   const handleLike = () => {
-    if (isLiking) return;
+    if (!profile || isLiking) return;
     setIsLiking(true);
     setTimeout(() => {
       setIsLiking(false);
       Alert.alert(
-        "Hey there!",
-        "This is to simulate an error!",
-        [{ text: "Understood" }]
+        "It's a Match! 🎉",
+        `You and ${profile.name} have liked each other!`,
+        [
+          {
+            text: "Send Message",
+            onPress: () => {
+              Alert.alert("Chat Initialized", `Chat room created with ${profile.name}!`);
+            },
+          },
+          {
+            text: "Keep Swiping",
+            onPress: () => router.back(),
+            style: "cancel",
+          },
+        ]
       );
-    }, 1500);
+    }, 1200);
   };
 
   if (!profile) {
