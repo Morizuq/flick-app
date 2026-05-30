@@ -16,6 +16,7 @@ export const Colors = {
     greyLight: '#F2F2F7',
     greyDark: '#48484A',
     error: '#FF3B30', // Red
+    accent: '#FF3B30', // Red
 
     // Semantic tokens
     backgroundElement: '#F2F2F7',
@@ -34,6 +35,7 @@ export const Colors = {
     greyLight: '#1C1C1E',
     greyDark: '#AEAEB2',
     error: '#FF453A', // Vibrant Red for dark mode
+    accent: '#FF453A', // Vibrant Red for dark mode
 
     // Semantic tokens
     backgroundElement: '#1C1C1E',
